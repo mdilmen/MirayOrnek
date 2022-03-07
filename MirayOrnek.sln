@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirayOrnek", "MirayOrnek\MirayOrnek.csproj", "{0F29D21C-7015-4DD7-A502-F489031B615E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirayOrnek.Data", "MirayOrnek.Data\MirayOrnek.Data.csproj", "{FB454F64-0FAF-45B0-890A-F0F53E293B9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F29D21C-7015-4DD7-A502-F489031B615E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F29D21C-7015-4DD7-A502-F489031B615E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F29D21C-7015-4DD7-A502-F489031B615E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F29D21C-7015-4DD7-A502-F489031B615E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB454F64-0FAF-45B0-890A-F0F53E293B9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB454F64-0FAF-45B0-890A-F0F53E293B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB454F64-0FAF-45B0-890A-F0F53E293B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB454F64-0FAF-45B0-890A-F0F53E293B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B4F5B11-4683-4CE8-962A-317D56A681FF}
+	EndGlobalSection
+EndGlobal
