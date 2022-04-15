@@ -10,5 +10,9 @@ namespace MirayOrnek.Data
     public interface IRepository
     {
         Task<List<Product>> GetAllProducts();
+        Task<Product> GetProductById(int id);
+        Task<Product> CreateProduct(Product product);
+        Task<Product> UpdateProduct(Product product);
+        Task DeleteProduct(int id);
     }
 }
