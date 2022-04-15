@@ -31,7 +31,7 @@ namespace MirayOrnek.Controllers
             return result;
         }
         
-        [HttpGet("product/{id}", Name = "GetProductById")]
+        [HttpGet("{id}", Name = "GetProductById")]
         public async Task<ActionResult<Product>> Get(int id)
         {
             _logger.LogWrite("GetProductById called!");

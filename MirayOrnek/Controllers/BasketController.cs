@@ -4,7 +4,6 @@ using MirayOrnek.Data.Entitites;
 using MirayOrnek.Helper;
 using MirayOrnek.Logger;
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -63,6 +62,7 @@ namespace MirayOrnek.Controllers
         public async Task<ActionResult<Basket>> Post([FromBody] Basket basket)
         {
             _logger.LogWrite("CreateBasket called!");
+            basket.Quantity = basket.Products.Count;
             var result = await _repository.CreateBasket(basket);
             return result;
         }
