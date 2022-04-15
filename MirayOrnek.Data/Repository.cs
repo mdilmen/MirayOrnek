@@ -18,8 +18,32 @@ namespace MirayOrnek.Data
         }
         public async Task<List<Product>> GetAllProducts()
         {
-            var result = await _dbContext.Products.ToListAsync();            
+            var result = await _dbContext.Products.ToListAsync();
             return result;
+        }
+        public async Task<Product> GetProductById(int id)
+        {
+            var result = await _dbContext.Products.FirstOrDefaultAsync(x => x.Id == id);
+            return result;
+        }
+        public async Task<Product> CreateProduct(Product product)
+        {
+            await _dbContext.Products.AddAsync(product);
+            await _dbContext.SaveChangesAsync();
+            return product;
+        }
+        public async Task<Product> UpdateProduct(Product product)
+        {
+            _dbContext.Products.Update(product);
+            await _dbContext.SaveChangesAsync();
+            return product;
+        }
+       
+        public async Task DeleteProduct(int id)
+        {
+            var deleteProduct = await GetProductById(id);
+           _dbContext.Products.Remove(deleteProduct);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
