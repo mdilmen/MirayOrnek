@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MirayOrnek.Data;
 
 #nullable disable
 
-namespace MirayOrnek.Data.Data.Migrations
+namespace MirayOrnek.Data.Migrations
 {
     [DbContext(typeof(MirayDbContext))]
-    partial class MirayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220424200541_ProductPrice_decimal")]
+    partial class ProductPrice_decimal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

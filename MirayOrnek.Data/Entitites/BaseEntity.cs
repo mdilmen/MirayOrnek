@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MirayOrnek.Data.Entitites
 {
-    public class Product : BaseEntity
+    public class BaseEntity
     {
-        public string? Name { get; set; }
-        public decimal Price { get; set; }
-        public bool IsActive { get; set; }
+        public int Id { get; set; }
+        public DateTime CreateDate { get; set; }
+        public DateTime? LastModifiedDate { get; set; }
     }
 }

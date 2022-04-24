@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MirayOrnek.Data;
 
 #nullable disable
 
-namespace MirayOrnek.Data.Data.Migrations
+namespace MirayOrnek.Data.Migrations
 {
     [DbContext(typeof(MirayDbContext))]
-    partial class MirayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220423234912_Create")]
+    partial class Create
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +70,7 @@ namespace MirayOrnek.Data.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("ProductPrice")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -114,7 +116,7 @@ namespace MirayOrnek.Data.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2022, 4, 24, 23, 5, 41, 656, DateTimeKind.Local).AddTicks(6841),
+                            CreateDate = new DateTime(2022, 4, 24, 2, 49, 12, 107, DateTimeKind.Local).AddTicks(8167),
                             IsActive = true,
                             Name = "Tasarım Çiçek",
                             Price = 90m
@@ -122,7 +124,7 @@ namespace MirayOrnek.Data.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2022, 4, 24, 23, 5, 41, 656, DateTimeKind.Local).AddTicks(6852),
+                            CreateDate = new DateTime(2022, 4, 24, 2, 49, 12, 107, DateTimeKind.Local).AddTicks(8183),
                             IsActive = true,
                             Name = "Doğum Günü Çiçekleri",
                             Price = 79m
@@ -130,7 +132,7 @@ namespace MirayOrnek.Data.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2022, 4, 24, 23, 5, 41, 656, DateTimeKind.Local).AddTicks(6853),
+                            CreateDate = new DateTime(2022, 4, 24, 2, 49, 12, 107, DateTimeKind.Local).AddTicks(8184),
                             IsActive = true,
                             Name = "Çiçek Buketleri",
                             Price = 94m
@@ -138,7 +140,7 @@ namespace MirayOrnek.Data.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2022, 4, 24, 23, 5, 41, 656, DateTimeKind.Local).AddTicks(6853),
+                            CreateDate = new DateTime(2022, 4, 24, 2, 49, 12, 107, DateTimeKind.Local).AddTicks(8185),
                             IsActive = true,
                             Name = "Lilyum & Zambak",
                             Price = 108m

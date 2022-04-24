@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace MirayOrnek.Data.Entitites
 {
-    public class Basket
+    public class Basket : BaseEntity
     {
         public Basket()
         {
-            this.Products = new List<Product>();
+            this.BasketItems = new List<BasketItem>();
         }
-        public int Id { get; set; }
-        public List<Product> Products { get; set; }
-
-        public int Quantity { get; set; }
+        public int BasketItemCount { get; set; }
+        public virtual ICollection<BasketItem> BasketItems { get; set; }
     }
 }
